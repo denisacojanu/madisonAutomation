@@ -9,7 +9,7 @@ import com.pages.CartPage;
 import com.pages.ProductPage;
 
 public class CartSteps extends ScenarioSteps {
-
+	//
 	private static final long serialVersionUID = 1L;
 	private ProductPage productPage;
     private CartPage cartPage;
