@@ -3,15 +3,16 @@ package com.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
 
 @DefaultUrl("http://testfasttrackit.info/selenium-test/")
-public class HomePage extends PageObject {
+public class HomePage extends AbstractPage {
 
 	@FindBy(css = ".skip-account .label")
 	private WebElementFacade accountLink;
 	@FindBy(css = "[title='Log In']")
 	private WebElementFacade loginLink;
+	@FindBy(css = "[title='Register']")
+	private WebElementFacade registerLink;
 	@FindBy(id = "search")
 	private WebElementFacade searchField;
 	@FindBy(css = "[title='Search']")
@@ -25,6 +26,10 @@ public class HomePage extends PageObject {
 
 	public void clickLoginLink() {
 		clickOn(loginLink);
+	}
+	
+	public void clickRegisterLink() {
+		clickOn(registerLink);
 	}
 
 	public void setSearchField(String keyword) {

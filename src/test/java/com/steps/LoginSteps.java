@@ -24,6 +24,12 @@ public class LoginSteps extends ScenarioSteps {
 		homePage.clickAccountLink();
 		homePage.clickLoginLink();
 	}
+	
+	@Step
+	public void navigateToRegister() {
+		homePage.clickAccountLink();
+		homePage.clickRegisterLink();
+	}
 
 	@Step
 	public void setCredentials(String email, String pass) {
