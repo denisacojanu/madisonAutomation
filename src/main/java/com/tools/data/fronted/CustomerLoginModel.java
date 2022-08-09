@@ -1,9 +1,9 @@
 package com.tools.data.fronted;
 
-import com.utils.ConfigConstants;
-import com.utils.Constants;
 import com.utils.FieldGenerators;
 import com.utils.FieldGenerators.Mode;
+import com.utils.constants.ConfigConstants;
+import com.utils.constants.Constants;
 
 public class CustomerLoginModel {
 

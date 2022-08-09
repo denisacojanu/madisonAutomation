@@ -3,7 +3,7 @@ package com.tests;
 import org.junit.Test;
 
 import com.steps.LoginSteps;
-import com.utils.Constants;
+import com.utils.constants.Constants;
 
 import net.thucydides.core.annotations.Steps;
 
