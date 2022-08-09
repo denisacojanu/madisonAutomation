@@ -1,5 +1,9 @@
 package com.pages;
 
+import org.junit.Assert;
+
+import com.utils.constants.Constants;
+
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
@@ -19,6 +23,8 @@ public class RegisterPage extends PageObject {
 	private WebElementFacade newsletterCheckbox;
 	@FindBy(css = ".button[title='Register']")
 	private WebElementFacade registerButton;
+	@FindBy(id = "advice-required-entry-firstname")
+	private WebElementFacade firstNameRequiredField;
 	
 	public void inputFirstname(String firstname) {
 		element(inputFirstName).waitUntilVisible();
@@ -47,6 +53,11 @@ public class RegisterPage extends PageObject {
 	
 	public void clickRegister() {
 		registerButton.click();
+	}
+	
+	public void verifyRequiredFirstName() {
+		Assert.assertTrue("Failure: Required field message is not present!",
+				firstNameRequiredField.getText().contains(Constants.REQUIRED_FIELD_MESSAGE));
 	}
 
 }

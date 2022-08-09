@@ -59,4 +59,9 @@ public class RegisterSteps extends ScenarioSteps {
 	public void clickRegisterButton() {
 		registerPage.clickRegister();
 	}
+	
+	@Step
+	public void verifyRequiredFirstName() {
+		registerPage.verifyRequiredFirstName();
+	}
 }
