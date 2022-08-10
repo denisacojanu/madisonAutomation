@@ -9,7 +9,6 @@ import net.thucydides.core.steps.ScenarioSteps;
 public class LoginSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = 1L;
-	private HomePageSteps homepageSteps;
 	private LoginPage loginPage;
 	private AccountPage accountPage;
 
@@ -31,8 +30,6 @@ public class LoginSteps extends ScenarioSteps {
 
 	@Step
 	public void doLogin(String email, String password) {
-		homepageSteps.navigateToHomepage();
-		homepageSteps.navigateToLogin();
 		setCredentials(email, password);
 		clickLogin();
 	}
