@@ -4,10 +4,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.steps.AccountSteps;
+import com.steps.HomePageSteps;
 import com.steps.LoginSteps;
 import com.steps.RegisterSteps;
 import com.tests.BaseTest;
-import com.tools.data.fronted.CustomerRegistrationModel;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
@@ -21,12 +21,14 @@ public class InvalidCustomerRegistration extends BaseTest {
 	public LoginSteps loginSteps;
 	@Steps
 	public AccountSteps accountSteps;
+	@Steps
+	public HomePageSteps homePageSteps;
 
 	@Test
 	public void invalidCustomerRegistration() {
 
-		loginSteps.navigateToHomepage();
-		loginSteps.navigateToRegister();
+		homePageSteps.navigateToHomepage();
+		homePageSteps.navigateToRegister();
 		registerSteps.clickRegisterButton();
 		registerSteps.verifyRequiredFirstName();
 	}
