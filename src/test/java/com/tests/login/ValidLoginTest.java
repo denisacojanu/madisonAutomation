@@ -27,7 +27,7 @@ public class ValidLoginTest extends BaseTest {
 		homePageSteps.navigateToLogin();
 		loginSteps.setCredentials(validLoginData.getUserName(), validLoginData.getPassword());
 		loginSteps.clickLogin();
-		loginSteps.verifyUsernameMessage("Cosmin Fast");
+		loginSteps.verifyUsernameMessage("Cojanu Denisa");
 	}
 
 }

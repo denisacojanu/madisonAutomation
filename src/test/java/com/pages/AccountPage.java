@@ -32,6 +32,9 @@ public class AccountPage extends AbstractPage {
 	
 	@FindBy(css = "li.success-msg span")
 	private WebElementFacade accountInformationSuccessMessage;
+	
+	@FindBy(css = "li.error-msg span")
+	private WebElementFacade invalidCurrentPasswordMessage;
 
 	public void verifyWelcomeMessage(String userName) {
 		welcomeText.shouldContainOnlyText("Hello, " + userName + "!");
@@ -67,8 +70,14 @@ public class AccountPage extends AbstractPage {
 	
 	public void verifyAccountInformationSuccessMessage() {
 		waitForPageToLoad();
-		Assert.assertTrue("Failure: Account information message is not displayed",
+		Assert.assertTrue("Failure: Account information message is not displayed!",
 				accountInformationSuccessMessage.getText().contains(Constants.ACCOUNT_INFORMATION_SUCCESS_MESSAGE));
+	}
+	
+	public void verifyInvalidCurrentPasswordMessage() {
+		waitForPageToLoad();
+		Assert.assertTrue("Failure: Invalid current password message is not displayed!",
+				invalidCurrentPasswordMessage.getText().contains(Constants.INVALID_CURRENT_PASSWORD_INFORMATION));
 	}
 
 }

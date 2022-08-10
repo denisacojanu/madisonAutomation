@@ -13,7 +13,7 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 
 @RunWith(SerenityRunner.class)
-public class ChangePasswordTest extends BaseTest {
+public class InvalidCurrentPasswordTest extends BaseTest {
 
 	@Steps
 	public LoginSteps loginSteps;
@@ -25,12 +25,12 @@ public class ChangePasswordTest extends BaseTest {
 	private CustomerLoginModel validLoginData = new CustomerLoginModel();
 
 	@Test
-	public void changePasswordTest() {
+	public void invalidCurrentPassword() {
 		homepageSteps.navigateToHomepage();
 		homepageSteps.navigateToLogin();
 		loginSteps.doLogin(validLoginData.getUserName(), validLoginData.getPassword());
 		loginSteps.verifyUsernameMessage("Cojanu Denisa");
-		accountSteps.changePassword();
+		accountSteps.invalidCurrentPassword();
 	}
 
 }
