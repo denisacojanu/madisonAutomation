@@ -1,7 +1,6 @@
 package com.steps;
 
 import com.pages.AccountPage;
-import com.pages.HomePage;
 import com.pages.LoginPage;
 
 import net.thucydides.core.annotations.Step;
@@ -10,26 +9,9 @@ import net.thucydides.core.steps.ScenarioSteps;
 public class LoginSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = 1L;
-	private HomePage homePage;
+	private HomePageSteps homepageSteps;
 	private LoginPage loginPage;
 	private AccountPage accountPage;
-
-	@Step
-	public void navigateToHomepage() {
-		homePage.open();
-	}
-
-	@Step
-	public void navigateToLogin() {
-		homePage.clickAccountLink();
-		homePage.clickLoginLink();
-	}
-	
-	@Step
-	public void navigateToRegister() {
-		homePage.clickAccountLink();
-		homePage.clickRegisterLink();
-	}
 
 	@Step
 	public void setCredentials(String email, String pass) {
@@ -49,8 +31,8 @@ public class LoginSteps extends ScenarioSteps {
 
 	@Step
 	public void doLogin(String email, String password) {
-		navigateToHomepage();
-		navigateToLogin();
+		homepageSteps.navigateToHomepage();
+		homepageSteps.navigateToLogin();
 		setCredentials(email, password);
 		clickLogin();
 	}

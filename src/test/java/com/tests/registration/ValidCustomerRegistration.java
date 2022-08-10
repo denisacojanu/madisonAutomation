@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.steps.AccountSteps;
+import com.steps.HomePageSteps;
 import com.steps.LoginSteps;
 import com.steps.RegisterSteps;
 import com.tests.BaseTest;
@@ -21,6 +22,8 @@ public class ValidCustomerRegistration extends BaseTest {
 	public LoginSteps loginSteps;
 	@Steps
 	public AccountSteps accountSteps;
+	@Steps
+	public HomePageSteps homePageSteps;
 
 	private CustomerRegistrationModel registrationModel = new CustomerRegistrationModel();
 
@@ -29,8 +32,8 @@ public class ValidCustomerRegistration extends BaseTest {
 		
 		System.out.println("Model: " + registrationModel);
 		
-		loginSteps.navigateToHomepage();
-		loginSteps.navigateToRegister();
+		homePageSteps.navigateToHomepage();
+		homePageSteps.navigateToRegister();
 		registerSteps.fillCustomerRegisterForm(registrationModel);
 		accountSteps.verifySuccessRegistrationMessage();
 	}
