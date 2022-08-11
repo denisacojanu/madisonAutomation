@@ -55,4 +55,20 @@ public class AccountSteps extends ScenarioSteps {
     public void verifyAccountInformationSuccessMessage() {
     	accountPage.verifyAccountInformationSuccessMessage();
     }
+    
+    @Step
+    public void invalidCurrentPassword() {
+    	clickOnChangePassword();
+    	inputCurrentPassword("766565");
+    	inputNewtPassword(Constants.NEW_USER_PASS);
+    	inputConfirmationPassword(Constants.NEW_USER_PASS);
+    	clickOnSave();
+    	verifyAccountInformation();
+    	
+    }
+    
+    @Step
+    public void verifyAccountInformation() {
+    	accountPage.verifyInvalidCurrentPasswordMessage();
+    }
 }
