@@ -21,7 +21,8 @@ public class ChangePasswordTest extends BaseTest {
 	public AccountSteps accountSteps;
 
 	private CustomerLoginModel validLoginData = new CustomerLoginModel();
-
+	
+	//test
 	@Test
 	public void changePasswordTest() {
 		loginSteps.doLogin(validLoginData.getUserName(), validLoginData.getPassword());
