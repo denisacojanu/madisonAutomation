@@ -7,6 +7,7 @@ import com.steps.HomePageSteps;
 import com.steps.LoginSteps;
 import com.tests.BaseTest;
 import com.tools.data.fronted.CustomerLoginModel;
+import com.utils.constants.Constants;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
@@ -27,7 +28,7 @@ public class ValidLoginTest extends BaseTest {
 		homePageSteps.navigateToLogin();
 		loginSteps.setCredentials(validLoginData.getUserName(), validLoginData.getPassword());
 		loginSteps.clickLogin();
-		loginSteps.verifyUsernameMessage("Cojanu Denisa");
+		loginSteps.verifyUsernameMessage(Constants.LOGGED_CUSTOMER_NAME);
 	}
 
 }

@@ -9,5 +9,6 @@ public class Constants {
     public static final String REQUIRED_FIELD_MESSAGE = "This is a required field.";
     public static final String ACCOUNT_INFORMATION_SUCCESS_MESSAGE = "The account information has been saved.";
     public static final String INVALID_CURRENT_PASSWORD_INFORMATION = "Invalid current password";
+    public static final String LOGGED_CUSTOMER_NAME = "Cojanu Denisa";
 
 }
