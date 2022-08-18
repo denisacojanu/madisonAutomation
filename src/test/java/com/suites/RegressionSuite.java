@@ -8,7 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 		RegisterSuite.class,
 		LoginSuite.class, 
-		SearchSuite.class
+		SearchSuite.class,
+		ChangedPasswordSuite.class
 
 })
 
