@@ -40,11 +40,4 @@ public class HomePage extends AbstractPage {
 		waitFor(searchField);
 		clickOn(searchIcon);
 	}
-
-	public void selectLanguage() {
-		selectFromDropdown(languageDropdown, "English");
-		withAction().moveToElement(languageDropdown).build();
-		getAlert().dismiss();
-		languageDropdown.shouldContainText("" + "product" + " has been added to your cart.");
-	}
 }

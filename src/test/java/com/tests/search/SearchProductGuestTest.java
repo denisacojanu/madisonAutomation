@@ -7,11 +7,14 @@ import com.tests.BaseTest;
 import net.thucydides.core.annotations.Steps;
 
 import com.steps.HomePageSteps;
+import com.steps.SearchSteps;
 
 public class SearchProductGuestTest extends BaseTest {
 	
 	@Steps
 	public HomePageSteps homepageSteps;
+    @Steps
+    protected SearchSteps searchSteps;
 
 
 	private String searchItem = "necklace";

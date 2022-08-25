@@ -6,7 +6,6 @@ import org.junit.runners.Suite.SuiteClasses;
 
 import com.tests.login.ValidLoginTest;
 import com.tests.search.SearchProductGuestTest;
-import com.tests.search.SearchProductLoggedUserTest;
 
 @SuiteClasses({
 	

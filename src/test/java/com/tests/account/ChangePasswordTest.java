@@ -24,7 +24,6 @@ public class ChangePasswordTest extends BaseTest {
 
 	private CustomerLoginModel validLoginData = new CustomerLoginModel();
 	
-	//test
 	@Test
 	public void changePasswordTest() {
 		homepageSteps.navigateToHomepage();

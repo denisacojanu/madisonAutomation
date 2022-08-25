@@ -6,8 +6,6 @@ import org.junit.runners.Suite.SuiteClasses;
 
 import com.tests.account.ChangePasswordTest;
 import com.tests.account.InvalidCurrentPasswordTest;
-import com.tests.search.SearchProductGuestTest;
-import com.tests.search.SearchProductLoggedUserTest;
 
 @SuiteClasses({
 	
