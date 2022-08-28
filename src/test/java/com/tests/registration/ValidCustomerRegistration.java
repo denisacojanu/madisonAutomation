@@ -30,8 +30,6 @@ public class ValidCustomerRegistration extends BaseTest {
 	@Test
 	public void loginWithValidCredentialsTest() {
 		
-		System.out.println("Model: " + registrationModel);
-		
 		homePageSteps.navigateToHomepage();
 		homePageSteps.navigateToRegister();
 		registerSteps.fillCustomerRegisterForm(registrationModel);
