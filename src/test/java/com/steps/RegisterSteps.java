@@ -1,7 +1,7 @@
 package com.steps;
 
+import com.data.CustomerRegistrationModel;
 import com.pages.RegisterPage;
-import com.tools.data.fronted.CustomerRegistrationModel;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Title;

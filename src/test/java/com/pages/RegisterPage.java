@@ -6,9 +6,8 @@ import com.utils.constants.Constants;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.pages.PageObject;
 
-public class RegisterPage extends PageObject {
+public class RegisterPage extends AbstractPage {
 	@FindBy(id = "firstname")
 	private WebElementFacade inputFirstName;
 	@FindBy(id = "lastname")

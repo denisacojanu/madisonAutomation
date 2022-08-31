@@ -1,4 +1,4 @@
-package com.tools.data.fronted;
+package com.data;
 
 import com.utils.FieldGenerators;
 import com.utils.FieldGenerators.Mode;

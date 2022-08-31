@@ -3,11 +3,11 @@ package com.tests.account;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import com.data.CustomerLoginModel;
 import com.steps.AccountSteps;
 import com.steps.HomePageSteps;
 import com.steps.LoginSteps;
 import com.tests.BaseTest;
-import com.tools.data.fronted.CustomerLoginModel;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;

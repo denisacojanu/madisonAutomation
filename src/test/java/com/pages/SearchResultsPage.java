@@ -2,12 +2,11 @@ package com.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 
 import java.util.List;
 
-public class SearchResultsPage extends PageObject {
+public class SearchResultsPage extends AbstractPage {
 
     @FindBy(css = ".products-grid li.item")
     private List<WebElementFacade> productsList;

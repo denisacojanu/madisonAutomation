@@ -3,10 +3,10 @@ package com.tests.login;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import com.data.CustomerLoginModel;
 import com.steps.HomePageSteps;
 import com.steps.LoginSteps;
 import com.tests.BaseTest;
-import com.tools.data.fronted.CustomerLoginModel;
 import com.utils.constants.Constants;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
